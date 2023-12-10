@@ -130,7 +130,7 @@
     <ClCompile Include="GSDTeamProject.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ASCII_ART.h" />
+    <ClInclude Include="ASCII_ART.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -20,7 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ASCII_ART.h">
+    <ClInclude Include="ASCII_ART.cpp">
       <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>
