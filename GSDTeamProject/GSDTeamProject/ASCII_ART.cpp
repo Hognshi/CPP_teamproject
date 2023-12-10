@@ -3,6 +3,8 @@
 #include <conio.h>
 #include "GSDTeamProject.cpp"
 
+using namespace std;
+
 void startScene()
 {
 	printf("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\n");
@@ -48,6 +50,25 @@ void startScene()
 	printf("                .rKQBQBBBBBBBBBBBBBBBQBbRX.                                                      rqjgQBBBBBBBBBBBBBBBBBE1:                  \n");
 	printf("                                                                                                                                        \n");
 	printf("                                                                                                                                            \n");
+	for (int i = 0; i < 70; i++)
+	{
+		cout << "■";
+	}
+	cout << "\n\n\n\t\t\t\t\t1) GameStart\n\n\t\t\t\t\t2) How To P?ay\n\n\n";
+	for (int i = 0; i < 70; i++)
+	{
+		cout << "■";
+	}
+}
+
+void line_story1()
+{
+	printf("\n드디어 이 병원에서 탈출할 시간이 왔군.");
+	_getch();
+	printf("\n반드시 오늘 탈출해야만 한다.");
+	_getch();
+	printf("\n그 사람이 자기가 있는 입원실로 오라그랬으니 일단 이 감금실부터 나가야겠군.\n");
+	_getch();
 }
 
 void window_bed()
@@ -97,6 +118,17 @@ void window_bed()
 	printf("                                     BD   Qv                                                     BB   BB                                    \n");
 	printf("                                     rXXPXS                                                      B5XqXSB                                    \n");
 	printf("                                                                                                                                            \n");
+	for (int i = 0; i < 70; i++)
+	{
+		cout << "■";
+	}
+
+	line_story1();
+
+	for (int i = 0; i < 70; i++)
+	{
+		cout << "■";
+	}
 }
 
 void flower_chest()
