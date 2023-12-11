@@ -556,9 +556,9 @@ void NightDutyRoom::CheckInput(string &input)
 			}
 			if (i == 1)
 			{
-				cout << "<다이아 스페이드 하트>\n() () () (바꾸기) | 다이아 클로버\n다이아 하트 클로버 스페이드 바꾸기\n다이아(->하트) 클로버(->스페이드)";
+				cout << "<다이아 스페이드 하트>";
 			}
-			cout << "\n\n";       
+			cout << "\n\n";
 			for (int j = 0; j < 70; j++)
 			{
 				cout << "■";
@@ -566,10 +566,9 @@ void NightDutyRoom::CheckInput(string &input)
 			cout << "\n";
 			ItemShow();
 
-			if (i == 1)
-				cin >> input;
-			else
-				_getch();
+			_getch();
+			if(i == 1)
+				CheckSafe();
 		}
 	}
 	else if (input == "문")
@@ -808,11 +807,65 @@ void NightDutyRoom::CheckInput(string &input)
 	}
 }
 
-void NightDutyRoom::CheckSafe(string input)
+void NightDutyRoom::CheckSafe()
 {
 	int answer[3] = {0,0,0};
+	string button;
 
+	while (true)
+	{
+		system("cls");
+		for (int j = 0; j < 70; j++)
+		{
+			cout << "■";
+		}
+		cout << "\n\n<다이아 스페이드 하트>\n";
 
+		for (int i = 0; i < 3; i++)
+		{
+			if (answer[i] == 0)
+			{
+				cout << "(      ) ";
+			}
+			else if (answer[i] == 1)
+			{
+				if (i % 2 != 0)
+					cout << "(스페이드) ";
+				else
+					cout << "(다이아) ";
+			}
+			else if (answer[i] == 2)
+			{
+				if (i % 2 != 0)
+					cout << "(클로버)   ";
+				else
+					cout << "(하트)   ";
+			}
+		}
+
+		cout << "\n\n";
+		cout << "[바꾸기1] [바꾸기2] [바꾸기3]";
+
+		cout << "\n\n";
+		for (int j = 0; j < 70; j++)
+		{
+			cout << "■";
+		}
+
+		cout << "\n\n";
+
+		cin >> button;
+
+		if (button == "바꾸기1")
+			answer[0] = (answer[0] + 1) % 3;
+		else if (button == "바꾸기2")
+			answer[1] = (answer[1] + 1) % 3;
+		else if (button == "바꾸기3")
+			answer[2] = (answer[2] + 1) % 3;
+
+		if (answer[0] == 1 && answer[1] == 1 && answer[2] == 2)
+			break;
+	}
 }
 
 int main()

@@ -24,6 +24,6 @@ public:
 	void FlowerChestShow(); // 꽃병, 서랍 방
 	void SafeDraw(); // 금고, 액자 방
 	void Door(); // 문
-	void CheckSafe(string input); //금고 문제
+	void CheckSafe(); //금고 문제
 	void CheckInput(string &input);
 };
