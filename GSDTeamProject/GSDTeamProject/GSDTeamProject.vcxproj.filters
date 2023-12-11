@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GSDTeamProject.cpp">
+    <ClCompile Include="Game.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Class.h">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
