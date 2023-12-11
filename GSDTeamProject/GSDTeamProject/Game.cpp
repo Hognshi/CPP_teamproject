@@ -4,74 +4,74 @@
 #include "Class.h"
 
 using namespace std;
-
 void game_help()
 {
 	system("cls");
-	printf("\t\t\t\t                       조작키\n"); _getch();
-	printf("\t\t\t\tㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n"); _getch();
-	printf("\t\t\t\t감금실\n"); _getch();
-	printf("\t\t\t\t방의 다른 쪽을 보고 싶으면 < 또는 >을 입력하면 된다.\n"); _getch();
-	printf("\t\t\t\t방 안의 물건을 조사하고 싶으면 [   ]의 안쪽에 있는 것을 입력하면 된다.\n"); _getch();
-	printf("\t\t\t\t예시) [침대1]을 조사하고 싶으면 침대1 이라고 입력하면된다.\n"); _getch();
-	printf("\t\t\t\t예시) [탄생의_꽃]을 조사하고 싶으면 탄생의_꽃 이라고 입력하면 된다.\n"); _getch();
-	printf("\t\t\t\t대사를 넘길 때는 아무 키를 입력해도 상관없다.\n"); _getch();
-	printf("\t\t\t\t아이템은 자동 사용이 된다.\n"); _getch();
-	printf("\t\t\t\t자물쇠 비밀번호 입력 창 같은 특정한 장면에서 벗어나고 싶다면 뒤로 를 입력하면 된다.\n"); _getch();
-	printf("\t\t\t\t입원실과 수술실\n"); _getch();
-	printf("\t\t\t\t입원실에는 방의 다른 쪽을 보기 위해 <를 이용하여 왔다갔다하는 방식이 아니다.\n"); _getch();
-	printf("\t\t\t\t기본적으로 방을 위에서 바라본 모습으로 화면에 뜬다.\n"); _getch();
-	printf("\t\t\t\t나머지는 감금실과 동일하다.\n"); _getch();
-	printf("\t\t\t\t어딘가에 가지고 있는 특정 아이템을 입력한다면 엔딩에 영향을 미칠 수 있는 아이템을 얻을 수 있다.\n"); _getch();
+	cout<<"\t\t\t\t                       조작키\n"; _getch();
+	cout<<"\t\t\t\tㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n"; _getch();
+	cout<<"\t\t\t\t숙직실\n"; _getch();
+	cout<<"\t\t\t\t방의 다른 쪽을 보고 싶으면 < 또는 >을 입력하면 된다.\n"; _getch();
+	cout<<"\t\t\t\t방 안의 물건을 조사하고 싶으면 [   ]의 안쪽에 있는 것을 입력하면 된다.\n"; _getch();
+	cout<<"\t\t\t\t예시) [침대1]을 조사하고 싶으면 침대1 이라고 입력하면된다.\n"; _getch();
+	cout<<"\t\t\t\t예시) [탄생의_꽃]을 조사하고 싶으면 탄생의_꽃 이라고 입력하면 된다.\n"; _getch();
+	cout<<"\t\t\t\t대사를 넘길 때는 아무 키를 입력해도 상관없다.\n"; _getch();
+	cout<<"\t\t\t\t아이템은 자동 사용이 된다.\n"; _getch();
+	cout<<"\t\t\t\t자물쇠 비밀번호 입력 창 같은 특정한 장면에서 벗어나고 싶다면 뒤로 를 입력하면 된다.\n"; _getch();
+	cout<<"\t\t\t\t사무실\n"; _getch();
+	cout<<"\t\t\t\t사무실에는 방의 다른 쪽을 보기 위해 <를 이용하여 왔다갔다하는 방식이 아니다.\n"; _getch();
+	cout<<"\t\t\t\t기본적으로 방을 위에서 바라본 모습으로 화면에 뜬다.\n"; _getch();
+	cout<<"\t\t\t\t나머지는 숙직실과 동일하다.\n"; _getch();
+	cout<<"\t\t\t\t가지고 있는 특정 아이템은 엔딩에 영향을 미칠 수 있다.\n"; _getch();
+	
 }
 
 void startScene(NightDutyRoom d, string &input)
 {
 	System system;
 
-	printf("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\n");
-	printf("                                                                                                                                            \n");
-	printf("                                                                                                                                            \n");
-	printf("                                                                                                                                            \n");
-	printf("                                                                                                                                            \n");
-	printf("                                                      KRQBBBQBBBQBBBBBBBBBBBBBQBgr                                                          \n");
-	printf("                                                      BQ15PKPKPKqXX2S5qKPKPKPSSZBB                                                          \n");
-	printf("                                                rBE   BB                        QB   .BB.    rr                                             \n");
-	printf("                                         BBB    vBB   BB          :BB          .BB    XI    iBBv                                            \n");
-	printf("                                 :BQ     rDL          QB          BBBI         .QB           ::     vBB                                     \n");
-	printf("                                 7BB                  BQ          BBBY         .BQ                  :BD                                     \n");
-	printf("                                                      BB    PBBBBBBBQBBBBBBB   .BQ                          ..                              \n");
-	printf("                          BBB                         BB    BBBBBBBBBBBQBBBB.  .BD                         .BB7                             \n");
-	printf("                          vBs                         BB          BBBu         :QZ                          ir                              \n");
-	printf("                                                      BB          BQBY         :BK                                ::                        \n");
-	printf("                    7BM           :BBBBBQBBBQBBBBBQBBBBB          BBBd         rBBBBBBBBQBBBQBBBBBQBBBBv          BB                        \n");
-	printf("                     r.           bBBL1uUu1uU1UuU1Uj1Y7i          2BB:          v7ujU111U1U1UuUu2u1uJPBB                                    \n");
-	printf("                                  2Bi                                                                 BB                                    \n");
-	printf("                Sv                                                                                                    .BR                   \n");
-	printf("               .BB                   .r               ..                                                              .BS                   \n");
-	printf("                       sdRBBBBMD.    BBu           5BBBBBBBY           1B       .B     .5        :bBBBBBBBBBBM:                             \n");
-	printf("                      :BQBBBQBQBD    EBB         :BBBr.::uBBB          BB:      2Bs    BB7      BBQBBBRRRBBBBBr                             \n");
-	printf("                              BBM :::ZBB         BBd      iBB          BBi   .. QBM   .BB5     rBB                                          \n");
-	printf("             QB.              BBBBQBBBQB.        gBBRurrLRBBR          BBBQBBBBBQBBBQBBBBq     vQB                       BBB                \n");
-	printf("             QB:              BBB     BBJ         .PBBBBBBP.           BBJ      gBBuuvLBBS     rBBBQBBQEQBBBBBB          rQv                \n");
-	printf("                              QBB     QBB                              BBP  ....QBBBBBBBBS      rJgBBBBBQgggDMK                             \n");
-	printf("                              :BQ      2r    iqPgQBBBBBBBBBQBQBBBS     YBBBBBBBBBB7    BBP            .BB                  vi               \n");
-	printf("           iBB                               dBBQBBBQg5uvriiirrL7                      BBi     iii::..SBB..:ivIu          5BB               \n");
-	printf("            Lr             :jbQBBQBBBBBBBr       :                            .LZBBBPi         BBBBBBBBQBBBBBBBB                            \n");
-	printf("                     r    PBBBBBBQEK1J1BBu      BB                         :BBBBBBBBBBQQ            .rsI1dPr                                \n");
-	printf("                   KBB    BB7          BB7      BBr                       YBBq.       BBB         5BBBBBBBBBBv          .                   \n");
-	printf("                  BBBBB   BBI          BBS      BB7                       QBB         .BBi       BBB        BBv       .BB:..                \n");
-	printf("            .PBBBBBBBBBB  BBB   .....  QBB      BBB:ir77vvsLY7vvj.        iBBP      .5BBB        QBR        BBP      5BBBBBBBBY             \n");
-	printf("           QQBBBBBBBQBBBB  QBBQBBBBBQBBBBD      iBBBBBBBBBBBBBBBBD         :BBBBBBBBBBB7          BBBBRbqQBBBQ     :QBBBBBQBQBBB:           \n");
-	printf("          BBBBBBBBBBBBBBBQJ    ...:.::..                                      ijbbqL:               uBBBBQBv     iBBBQBBBBBQBBBBB.          \n");
-	printf("         1BBBBBBBBBBQBBBQBQBX.                                                                                .KQBBBQBBBBBBBQBBBBB          \n");
-	printf("         XBQBBBBBQBBBBBBBBBBBBBBDJi.                                                                      :vgBBQBBBBBBBBBBBBBQBQBB          \n");
-	printf("          BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB                :B            7B                    .:iUPZQBBBBBBBBBQBBBBBBBQBBBBBBBB:          \n");
-	printf("          .BBBBBBBBBBBBBBBBBBBBBBQBBBBBBBBBB                JB            gB                   QBBBBBBBBBBBBBBBBBBBBBQBQBQBQBBBBi           \n");
-	printf("            7BBBBBBBBBBBBBBBQBQBBBBBBBBBBBBBBBQBBBQBBBBBBBQBBBBBBBBBQBBBBBBBBBBBBBBBQBBBBBQBBBQBBBBBBBQBBBBBBBBBBBQBBBBBQBBBBB7             \n");
-	printf("                .rKQBQBBBBBBBBBBBBBBBQBbRX.                                                      rqjgQBBBBBBBBBBBBBBBBBE1:                  \n");
-	printf("                                                                                                                                        \n");
-	printf("                                                                                                                                            \n");
+	cout<<"■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\n";
+	cout<<"                                                                                                                                            \n";
+	cout<<"                                                                                                                                            \n";
+	cout<<"                                                                                                                                            \n";
+	cout<<"                                                                                                                                            \n";
+	cout<<"                                                      KRQBBBQBBBQBBBBBBBBBBBBBQBgr                                                          \n";
+	cout<<"                                                      BQ15PKPKPKqXX2S5qKPKPKPSSZBB                                                          \n";
+	cout<<"                                                rBE   BB                        QB   .BB.    rr                                             \n";
+	cout<<"                                         BBB    vBB   BB          :BB          .BB    XI    iBBv                                            \n";
+	cout<<"                                 :BQ     rDL          QB          BBBI         .QB           ::     vBB                                     \n";
+	cout<<"                                 7BB                  BQ          BBBY         .BQ                  :BD                                     \n";
+	cout<<"                                                      BB    PBBBBBBBQBBBBBBB   .BQ                          ..                              \n";
+	cout<<"                          BBB                         BB    BBBBBBBBBBBQBBBB.  .BD                         .BB7                             \n";
+	cout<<"                          vBs                         BB          BBBu         :QZ                          ir                              \n";
+	cout<<"                                                      BB          BQBY         :BK                                ::                        \n";
+	cout<<"                    7BM           :BBBBBQBBBQBBBBBQBBBBB          BBBd         rBBBBBBBBQBBBQBBBBBQBBBBv          BB                        \n";
+	cout<<"                     r.           bBBL1uUu1uU1UuU1Uj1Y7i          2BB:          v7ujU111U1U1UuUu2u1uJPBB                                    \n";
+	cout<<"                                  2Bi                                                                 BB                                    \n";
+	cout<<"                Sv                                                                                                    .BR                   \n";
+	cout<<"               .BB                   .r               ..                                                              .BS                   \n";
+	cout<<"                       sdRBBBBMD.    BBu           5BBBBBBBY           1B       .B     .5        :bBBBBBBBBBBM:                             \n";
+	cout<<"                      :BQBBBQBQBD    EBB         :BBBr.::uBBB          BB:      2Bs    BB7      BBQBBBRRRBBBBBr                             \n";
+	cout<<"                              BBM :::ZBB         BBd      iBB          BBi   .. QBM   .BB5     rBB                                          \n";
+	cout<<"             QB.              BBBBQBBBQB.        gBBRurrLRBBR          BBBQBBBBBQBBBQBBBBq     vQB                       BBB                \n";
+	cout<<"             QB:              BBB     BBJ         .PBBBBBBP.           BBJ      gBBuuvLBBS     rBBBQBBQEQBBBBBB          rQv                \n";
+	cout<<"                              QBB     QBB                              BBP  ....QBBBBBBBBS      rJgBBBBBQgggDMK                             \n";
+	cout<<"                              :BQ      2r    iqPgQBBBBBBBBBQBQBBBS     YBBBBBBBBBB7    BBP            .BB                  vi               \n";
+	cout<<"           iBB                               dBBQBBBQg5uvriiirrL7                      BBi     iii::..SBB..:ivIu          5BB               \n";
+	cout<<"            Lr             :jbQBBQBBBBBBBr       :                            .LZBBBPi         BBBBBBBBQBBBBBBBB                            \n";
+	cout<<"                     r    PBBBBBBQEK1J1BBu      BB                         :BBBBBBBBBBQQ            .rsI1dPr                                \n";
+	cout<<"                   KBB    BB7          BB7      BBr                       YBBq.       BBB         5BBBBBBBBBBv          .                   \n";
+	cout<<"                  BBBBB   BBI          BBS      BB7                       QBB         .BBi       BBB        BBv       .BB:..                \n";
+	cout<<"            .PBBBBBBBBBB  BBB   .....  QBB      BBB:ir77vvsLY7vvj.        iBBP      .5BBB        QBR        BBP      5BBBBBBBBY             \n";
+	cout<<"           QQBBBBBBBQBBBB  QBBQBBBBBQBBBBD      iBBBBBBBBBBBBBBBBD         :BBBBBBBBBBB7          BBBBRbqQBBBQ     :QBBBBBQBQBBB:           \n";
+	cout<<"          BBBBBBBBBBBBBBBQJ    ...:.::..                                      ijbbqL:               uBBBBQBv     iBBBQBBBBBQBBBBB.          \n";
+	cout<<"         1BBBBBBBBBBQBBBQBQBX.                                                                                .KQBBBQBBBBBBBQBBBBB          \n";
+	cout<<"         XBQBBBBBQBBBBBBBBBBBBBBDJi.                                                                      :vgBBQBBBBBBBBBBBBBQBQBB          \n";
+	cout<<"          BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB                :B            7B                    .:iUPZQBBBBBBBBBQBBBBBBBQBBBBBBBB:          \n";
+	cout<<"          .BBBBBBBBBBBBBBBBBBBBBBQBBBBBBBBBB                JB            gB                   QBBBBBBBBBBBBBBBBBBBBBQBQBQBQBBBBi           \n";
+	cout<<"            7BBBBBBBBBBBBBBBQBQBBBBBBBBBBBBBBBQBBBQBBBBBBBQBBBBBBBBBQBBBBBBBBBBBBBBBQBBBBBQBBBQBBBBBBBQBBBBBBBBBBBQBBBBBQBBBBB7             \n";
+	cout<<"                .rKQBQBBBBBBBBBBBBBBBQBbRX.                                                      rqjgQBBBBBBBBBBBBBBBBBE1:                  \n";
+	cout<<"                                                                                                                                        \n";
+	cout<<"                                                                                                                                            \n";
 	for (int j = 0; j < 70; j++)
 	{
 		cout << "■";
@@ -96,59 +96,40 @@ void startScene(NightDutyRoom d, string &input)
 	{
 		game_help();
 		d.RoomShow();
+		input = "1";
 		d.CheckInput(input);
 	}
 }
 // 아이템 유무 판단
 void System :: Item()
 {
-	for (int i = 0; i < 11; i++)
+	for (int i = 0; i < 6; i++)
 	{
 		itemList[i] = " ";
 	}
-	if (nipper)
-	{
-		itemList[0] = "니퍼 ";
-	}
-	if (stick)
-	{
-		itemList[1] = "낡은 나무 막대기 ";
-	}
-	if (wire)
-	{
-		itemList[2] = "철사 ";
-	}
-	if (peg)
-	{
-		itemList[3] = "녹슨 못 ";
-	}
-	if (USB)
-	{
-		itemList[4] = "USB ";
-	}
-	if (data)
-	{
-		itemList[5] = "자료 ";
-	}
 	if (flowerVase)
 	{
-		itemList[6] = "[꽃병] ";
+		itemList[0] = "[꽃병] ";
 	}
 	if (birdcage)
 	{
-		itemList[7] = "[새장]팻말 ";
+		itemList[1] = "[새장]팻말 ";
 	}
 	if (flowerGround)
 	{
-		itemList[8] = "[꽃밭]팻말 ";
+		itemList[2] = "[꽃밭]팻말 ";
 	}
 	if (butterfly)
 	{
-		itemList[9] = "[나비]팻말 ";
+		itemList[3] = "[나비]팻말 ";
 	}
 	if (map)
 	{
-		itemList[10] = "구조도 ";
+		itemList[4] = "구조도 ";
+	}
+	if (docx)
+	{
+		itemList[5] = "회의 자료 ";
 	}
 }
 
@@ -157,7 +138,7 @@ void System::ItemShow()
 {
 	Item();
 	cout << "\nitem list : ";
-	for (int i = 0; i < 11; i++)
+	for (int i = 0; i < 6; i++)
 	{
 		if (itemList[i] != " ")
 		{
@@ -324,58 +305,117 @@ void NightDutyRoom::SafeDraw()
 
 void NightDutyRoom::Door()
 {
-	printf("r:rrrrrrrirrrirrrirrrrrrrrrrrrrrrrrrrirrrrrrrirrrrrrrrrrrrrrrrrrrrrrrrrrrrrirrrrrrrrririrrrrrrrrrrrirrrirrrrrrrrrrrrrrrrrrrrrirrrrririrrrr7:\n");
-	printf("r:rrririrrrrrrrrrirrrrrrrrrrrrrrririririrrririrrrrrirrrrrrrrrrrirrrrrrrirrrrrrrrrirrrrrrririrrrirrrrrrrrrrririrrrrrrrrrrrrrrrrrrrrrrrirrrrr:\n");
-	printf("r:rrririrrrrrrrrrirrrrrrrrrrrrrrririririrrririrrrrrirrrrrrrrrrrirrrrrrrirrrrrrrrrirrrrrrririrrrirrrrrrrrrrririrrrrrrrrrrrrrrrrrrrrrrrirrrrr:\n");
-	printf("r:rririririrrririrrriririririrrrirrrirrriririrrririrrririrrrrririririririririrrriririrrrrrrrirrriririrrrirrrirrrrrirrrirrrrrrrirrrrrrrirrrri\n");
-	printf("r:ririririririririririririririrrririrrriririririrrririririririrrriririririrrriririririririririrrrirrrirrririririririririririririririrrrirrr:\n");
-	printf("rirriririririrrririrrriririririririririririririririririririririririririririririririririririririririririririririrrrirrririririrrrrrrriririrr:\n");
-	printf("r:rrririririririrrriririririririrrrrrirrrrriiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiririririrrriririrrriririririrrrirrririr:\n");
-	printf("r:irirrrrriririririririrrririririririririri:::::::::::::::::.:.:.:::::.:::::.:::.:.:.:.:.:.:.:.:...iiririrrririririrrririrrrrririririririrri\n");
-	printf("r:riririririrrrirrrirrriririririririririri:YbBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBQBBBBBBBQBBBBBBBBBBBBBBR:iiririririrrriririririririrrriririrrrrr:\n");
-	printf("r:iriririririririririririririrrriririririiiBP .................................................. MBi:riririririririririririririririrrriririi\n");
-	printf("r:rirrrirrririrrriririrrriririririririrrr:iBU .................................................. uBi:iriririririririririrrririririrrrrrrrir:\n");
-	printf("r:rrirrririririririrrrrririririririririri::B2  ................................................. 5Bi:iirirrriririririririririririrrririririi\n");
-	printf("r:rrriririrrrrriririririrrririririrrrirrr:iBI .................................................. jBi:iriririririrrrrriririrrrirrrrrirrrirrr:\n");
-	printf("i:iririririrrriririririrrriririririririri::B2 .................................................. sBi:iiriririririririririririririrrririririi\n");
-	printf("r:ririririrrririririririririririrrriririr:iB5 .................................................. YBi:iriririrrrrriririrrriririrrrrriririrrr:\n");
-	printf("r:iririririririririrrririrrriririririrrri::BI  ................................................. sBr:rirrriririrrrrriririririririririririrr:\n");
-	printf("r:ririririrrririrrririrrrrririririrrririr:iQI .................................................  vBr:iriririrrrirrriririririririririririrrr:\n");
-	printf("r:iririririrrririririririrrririririririri::B2 .................................................. vBr:iiririrrririrrrrriririrrriririrrrrrirr:\n");
-	printf("r:rrrirrririririririririrrrrriririrrrirrr:iBI .................................................. rBr:iririririririrrriririririrrririrrrrrrr:\n");
-	printf("r:rrirrrrriririririrrriririririririririri:iBU  ................................................. rBr:ririrrrrririririririrrriririrrriririrri\n");
-	printf("r:riririririririririririrrriririririririr:iB2 .................................................. rB7:iririiiiiriiiriririririririririririrrr:\n");
-	printf("iirririririririririririrrriririririririri::B2  ................................................. rBv.iiri:.:.:.:.:.::iirirrriririririririrri\n");
-	printf("r:rirrriririririrrrrririrrririrrririririr:iBI .................................................. iBv:iriisJu5IXI5IUss:iirrriririririririrrr:\n");
-	printf("r:rriririrrririririririririririrrriririri:iB2  ................................................. iBL:ri:iBBBQBBBQBBBB::rrririririririrrrirri\n");
-	printf("r:riririririririririririririririririririr:iB5 .................................................. :Bv:ir:iBB        QB:iiririririririrrririr:\n");
-	printf("r:rrrrirrriririririririririririririririri:iB2 .................................................. :BY.ii::BBY:rrri:LBB::riririrrriririrrrirri\n");
-	printf("r:riririrrrirrriririririririririrrriririi:iQI .................................................. :BJ:ir::BBBBBBBBBBQB::iririririrrriririrrr:\n");
-	printf("r:rriririririrrriririrrririrrriririrrriri::BU .................................................. :B1.ri::BBi      vBQ::rirrrrririririririrr:\n");
-	printf("r:riririririrrririrrrrrrrrririrrririririr:iB5 .................................................. .Bj:ir::BBi      vBB::iririrrrrrrrrrrririr:\n");
-	printf("r:rririrrririririririririririririrrririri::BU  .........................................         .Q1.ii::BB:      rBB::ririririririririrrrri\n");
-	printf("r:rrriririririririrrrirrrrririririririrrr:iQI .........................................   :r7:   .Bj:ir::QBJ.:::: XQB::iririrrririrrririrrr:\n");
-	printf("r:rrrriririririririrrrrrirrririririrrrrri::B2 ........................................  rBBBBBQq  B2.ri:iBBBBBBBBBBBB::riririrrriririririrri\n");
-	printf("r:ririririririrrririrrririrrrrriririririr:iB2 ........................................ :BQBBBBBB2 BX.irii77777vvv7v7v:iiririririririrrririr:\n");
-	printf("rirriririririrrriririririrrririririririri:iB2  ....................................... 7QBBBBBBBZ BP.irri:::.:::.::::iiriririririririririrri\n");
-	printf("r:rrriririririririririrrririrrriririririi:iB2 ........................................  ZBBBBBBB  BK.iriririiiriririririririririririrrrrrir:\n");
-	printf("r:iriririririririririririrrririririririri:iB2 .........................................  :1ggPi   Bq.iirirrrrrrrrrrririrrrrriririririririrri\n");
-	printf("r:riririrrriririririririririririririririr:iBI ..........................................          BK.irrrirrrrririririririrrrirrriririririr:\n");
-	printf("r:rririrrrirrriririririrrriririririririri:iB2  ........................................... . ...  Bd.iirirrriririririrrririrrririririrrrirri\n");
-	printf("r:rrririrrririrrrrrirrririrrririrrrrririr:iBI ..................................................  BE.irrririrrrrriririririririrrririrrrirrr:\n");
-	printf("rirrrriririririririririrrrrririrrriririri:iBU ..................................................  BD.ririririririririririririririririrrrirri\n");
-	printf("r:rirrririririririrrririririririririririr:iQ5 ..................................................  BD.irrrrririririririririririririrrririrrr:\n");
-	printf("r:iriririririrrrirrririrrriririririririri:iB2 ..................................................  Bg.iirirrriririririrrriririririrrriririri:\n");
-	printf("r:riririrrririririririrrrirrrrriririririr:iBI ..................................................  Bg.iriririririrrrrrrririrrririririririrrr:\n");
-	printf("r:rrirrrirrrirrrirrririririrrrrrirrrirrri::BU ..................................................  BQ.irrrrrrrrirrrrrirrrrrirrririririrrrrrri\n");
-	printf("r:rrrrrrririrrrrrrrrrirrrrrrrirrrrririrrr:iQ5 ..................................................  BQ.irrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr7i\n");
-	printf("r::i:i:i:i:i:i:i:i:i:i:i:::i:i:i:i:i:i:i:.:Bj                                                     BB ::i:i:i:::::i:i:i:i:i:i:i:::i:i:i:i:i::\n");
+	cout<<"r:rrrrrrrirrrirrrirrrrrrrrrrrrrrrrrrrirrrrrrrirrrrrrrrrrrrrrrrrrrrrrrrrrrrrirrrrrrrrririrrrrrrrrrrrirrrirrrrrrrrrrrrrrrrrrrrrirrrrririrrrr7:\n";
+	cout<<"r:rrririrrrrrrrrrirrrrrrrrrrrrrrririririrrririrrrrrirrrrrrrrrrrirrrrrrrirrrrrrrrrirrrrrrririrrrirrrrrrrrrrririrrrrrrrrrrrrrrrrrrrrrrrirrrrr:\n";
+	cout<<"r:rrririrrrrrrrrrirrrrrrrrrrrrrrririririrrririrrrrrirrrrrrrrrrrirrrrrrrirrrrrrrrrirrrrrrririrrrirrrrrrrrrrririrrrrrrrrrrrrrrrrrrrrrrrirrrrr:\n";
+	cout<<"r:rririririrrririrrriririririrrrirrrirrriririrrririrrririrrrrririririririririrrriririrrrrrrrirrriririrrrirrrirrrrrirrrirrrrrrrirrrrrrrirrrri\n";
+	cout<<"r:ririririririririririririririrrririrrriririririrrririririririrrriririririrrriririririririririrrrirrrirrririririririririririririririrrrirrr:\n";
+	cout<<"rirriririririrrririrrriririririririririririririririririririririririririririririririririririririririririririririrrrirrririririrrrrrrriririrr:\n";
+	cout<<"r:rrririririririrrriririririririrrrrrirrrrriiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiririririrrriririrrriririririrrrirrririr:\n";
+	cout<<"r:irirrrrriririririririrrririririririririri:::::::::::::::::.:.:.:::::.:::::.:::.:.:.:.:.:.:.:.:...iiririrrririririrrririrrrrririririririrri\n";
+	cout<<"r:riririririrrrirrrirrriririririririririri:YbBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBQBBBBBBBQBBBBBBBBBBBBBBR:iiririririrrriririririririrrriririrrrrr:\n";
+	cout<<"r:iriririririririririririririrrriririririiiBP .................................................. MBi:riririririririririririririririrrriririi\n";
+	cout<<"r:rirrrirrririrrriririrrriririririririrrr:iBU .................................................. uBi:iriririririririririrrririririrrrrrrrir:\n";
+	cout<<"r:rrirrririririririrrrrririririririririri::B2  ................................................. 5Bi:iirirrriririririririririririrrririririi\n";
+	cout<<"r:rrriririrrrrriririririrrririririrrrirrr:iBI .................................................. jBi:iriririririrrrrriririrrrirrrrrirrrirrr:\n";
+	cout<<"i:iririririrrriririririrrriririririririri::B2 .................................................. sBi:iiriririririririririririririrrririririi\n";
+	cout<<"r:ririririrrririririririririririrrriririr:iB5 .................................................. YBi:iriririrrrrriririrrriririrrrrriririrrr:\n";
+	cout<<"r:iririririririririrrririrrriririririrrri::BI  ................................................. sBr:rirrriririrrrrriririririririririririrr:\n";
+	cout<<"r:ririririrrririrrririrrrrririririrrririr:iQI .................................................  vBr:iriririrrrirrriririririririririririrrr:\n";
+	cout<<"r:iririririrrririririririrrririririririri::B2 .................................................. vBr:iiririrrririrrrrriririrrriririrrrrrirr:\n";
+	cout<<"r:rrrirrririririririririrrrrriririrrrirrr:iBI .................................................. rBr:iririririririrrriririririrrririrrrrrrr:\n";
+	cout<<"r:rrirrrrriririririrrriririririririririri:iBU  ................................................. rBr:ririrrrrririririririrrriririrrriririrri\n";
+	cout<<"r:riririririririririririrrriririririririr:iB2 .................................................. rB7:iririiiiiriiiriririririririririririrrr:\n";
+	cout<<"iirririririririririririrrriririririririri::B2  ................................................. rBv.iiri:.:.:.:.:.::iirirrriririririririrri\n";
+	cout<<"r:rirrriririririrrrrririrrririrrririririr:iBI .................................................. iBv:iriisJu5IXI5IUss:iirrriririririririrrr:\n";
+	cout<<"r:rriririrrririririririririririrrriririri:iB2  ................................................. iBL:ri:iBBBQBBBQBBBB::rrririririririrrrirri\n";
+	cout<<"r:riririririririririririririririririririr:iB5 .................................................. :Bv:ir:iBB        QB:iiririririririrrririr:\n";
+	cout<<"r:rrrrirrriririririririririririririririri:iB2 .................................................. :BY.ii::BBY:rrri:LBB::riririrrriririrrrirri\n";
+	cout<<"r:riririrrrirrriririririririririrrriririi:iQI .................................................. :BJ:ir::BBBBBBBBBBQB::iririririrrriririrrr:\n";
+	cout<<"r:rriririririrrriririrrririrrriririrrriri::BU .................................................. :B1.ri::BBi      vBQ::rirrrrririririririrr:\n";
+	cout<<"r:riririririrrririrrrrrrrrririrrririririr:iB5 .................................................. .Bj:ir::BBi      vBB::iririrrrrrrrrrrririr:\n";
+	cout<<"r:rririrrririririririririririririrrririri::BU  .........................................         .Q1.ii::BB:      rBB::ririririririririrrrri\n";
+	cout<<"r:rrriririririririrrrirrrrririririririrrr:iQI .........................................   :r7:   .Bj:ir::QBJ.:::: XQB::iririrrririrrririrrr:\n";
+	cout<<"r:rrrriririririririrrrrrirrririririrrrrri::B2 ........................................  rBBBBBQq  B2.ri:iBBBBBBBBBBBB::riririrrriririririrri\n";
+	cout<<"r:ririririririrrririrrririrrrrriririririr:iB2 ........................................ :BQBBBBBB2 BX.irii77777vvv7v7v:iiririririririrrririr:\n";
+	cout<<"rirriririririrrriririririrrririririririri:iB2  ....................................... 7QBBBBBBBZ BP.irri:::.:::.::::iiriririririririririrri\n";
+	cout<<"r:rrriririririririririrrririrrriririririi:iB2 ........................................  ZBBBBBBB  BK.iriririiiriririririririririririrrrrrir:\n";
+	cout<<"r:iriririririririririririrrririririririri:iB2 .........................................  :1ggPi   Bq.iirirrrrrrrrrrririrrrrriririririririrri\n";
+	cout<<"r:riririrrriririririririririririririririr:iBI ..........................................          BK.irrrirrrrririririririrrrirrriririririr:\n";
+	cout<<"r:rririrrrirrriririririrrriririririririri:iB2  ........................................... . ...  Bd.iirirrriririririrrririrrririririrrrirri\n";
+	cout<<"r:rrririrrririrrrrrirrririrrririrrrrririr:iBI ..................................................  BE.irrririrrrrriririririririrrririrrrirrr:\n";
+	cout<<"rirrrriririririririririrrrrririrrriririri:iBU ..................................................  BD.ririririririririririririririririrrrirri\n";
+	cout<<"r:rirrririririririrrririririririririririr:iQ5 ..................................................  BD.irrrrririririririririririririrrririrrr:\n";
+	cout<<"r:iriririririrrrirrririrrriririririririri:iB2 ..................................................  Bg.iirirrriririririrrriririririrrriririri:\n";
+	cout<<"r:riririrrririririririrrrirrrrriririririr:iBI ..................................................  Bg.iriririririrrrrrrririrrririririririrrr:\n";
+	cout<<"r:rrirrrirrrirrrirrririririrrrrrirrrirrri::BU ..................................................  BQ.irrrrrrrrirrrrrirrrrrirrririririrrrrrri\n";
+	cout<<"r:rrrrrrririrrrrrrrrrirrrrrrrirrrrririrrr:iQ5 ..................................................  BQ.irrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr7i\n";
+	cout<<"r::i:i:i:i:i:i:i:i:i:i:i:::i:i:i:i:i:i:i:.:Bj                                                     BB ::i:i:i:::::i:i:i:i:i:i:i:::i:i:i:i:i::\n";
 }
 
 //숙직실 입력 체크
 void NightDutyRoom::CheckInput(string &input)
 {
-	if (input == "침대" || input == "1")
+	if (input == "1")
+	{
+		for (int i = 0; i < 9; i++)
+		{
+			system("cls");
+			RoomShow(); for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n\n";
+			if (i == 0)
+			{
+				cout << "\n으음… 내가 잠들었었나..?\n";
+			}
+			else if (i == 1)
+			{
+				cout << "\n여긴… 아, 숙직실이네.\n";
+			}
+			else if (i == 2)
+			{
+				cout << "\n!!\n";
+			}
+			else if (i == 3)
+			{
+				cout << "\n오늘 아침에 회의 있었는데, 늦겠다!\n";
+			}
+			else if (i == 4)
+			{
+				cout << "\n망했네. 회의 문서 사무실에 있는데.\n";
+			}
+			else if (i == 5)
+			{
+				cout << "\n빨리 가야겠다.\n";
+			}
+			else if (i == 6)
+			{
+				cout << "\n(철컥철컥)\n";
+			}
+			else if (i == 7)
+			{
+				cout << "\n아니 문이 왜 안 열려?\n";
+			}
+			else if (i == 8)
+			{
+				cout << "\n일단 주변을 둘러보자.\n";
+			}
+			cout << "\n\n";
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n";
+			ItemShow();
+			if (i == 8)
+				cin >> input;
+			else
+				_getch();
+		}
+	}
+	else if (input == "침대")
 	{
 		for (int i = 0; i < 1; i++)
 		{
@@ -413,7 +453,7 @@ void NightDutyRoom::CheckInput(string &input)
 			cout << "\n\n";
 			if (i == 0)
 			{
-				cout << "창문에는 단단하게 막힌 철창이 있다.";
+				cout << "창문에는 단단하게 막혀있다.";
 			}
 			cout << "\n\n";
 			for (int j = 0; j < 70; j++)
@@ -481,6 +521,79 @@ void NightDutyRoom::CheckInput(string &input)
 			}
 		}
 	}
+	else if (input == "서랍1" || input == "서랍2")
+	{
+		for (int i = 0; i < 1; i++)
+		{
+			system("cls");
+			FlowerChestShow();
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n\n";
+			
+			if (i == 0)
+			{
+				cout << "서랍이 비어있다.";
+			}
+
+			cout << "\n\n";
+
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+
+			cout << "\n";
+			ItemShow();
+
+			cin >> input;
+
+		}
+	}
+	else if (input == "서랍3")
+	{
+		for (int i = 0; i < 2; i++)
+		{
+			system("cls");
+			FlowerChestShow();
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n\n";
+
+			if (i == 0)
+			{
+				cout << "!달그락!";
+			}
+			else if (i == 1)
+			{
+				cout << "[꽃밭]팻말을 얻었다";
+				flowerGround = true;
+			}
+
+			cout << "\n\n";
+
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+
+			cout << "\n";
+			ItemShow();
+
+			if (i == 1)
+			{
+				cin >> input;
+			}
+			else
+			{
+				_getch();
+			}
+		}
+	}
 	else if (input == "액자")
 	{
 		for (int i = 0; i < 3; i++)
@@ -495,7 +608,7 @@ void NightDutyRoom::CheckInput(string &input)
 			cout << "\n\n";
 			if (i == 0)
 			{
-				cout << "(1 / 3)이라 쓰여져 있다.";
+				cout << "(3 / 3)이라 쓰여져 있다.";
 			}
 			if (i == 1)
 			{
@@ -550,13 +663,17 @@ void NightDutyRoom::CheckInput(string &input)
 				cout << "■";
 			}
 			cout << "\n\n";
-			if (i == 0)
+			if (i == 0 && !butterfly)
 			{
 				cout << "(1 / 3)이라 쓰여져 있다.";
 			}
-			if (i == 1)
+			else if (i == 1 && !butterfly)
 			{
 				cout << "<다이아 스페이드 하트>";
+			}
+			else if (i == 1 && butterfly)
+			{
+				cout << "\n금고는 비어있어.\n";
 			}
 			cout << "\n\n";
 			for (int j = 0; j < 70; j++)
@@ -567,8 +684,25 @@ void NightDutyRoom::CheckInput(string &input)
 			ItemShow();
 
 			_getch();
-			if(i == 1)
+
+			if (i == 1 && !butterfly)
+			{
 				CheckSafe();
+				system("cls");
+				SafeDraw();
+				for (int j = 0; j < 70; j++)
+				{
+					cout << "■";
+				}
+				cout << "\n\n\n\n";
+				for (int j = 0; j < 70; j++)
+				{
+					cout << "■";
+				}
+
+				ItemShow();
+				cin >> input;
+			}
 		}
 	}
 	else if (input == "문")
@@ -595,7 +729,7 @@ void NightDutyRoom::CheckInput(string &input)
 				if (!flowerGround)
 					cout << "?";
 				else
-					cout << "[나비]팻말";
+					cout << "[꽃밭]팻말";
 
 				cout << ")" << "이 아니라("; 
 				
@@ -606,13 +740,21 @@ void NightDutyRoom::CheckInput(string &input)
 					cout << ")" << " 으로 돌아가야 한다";
 			}
 			cout << "\n\n";
+			if (butterfly && flowerGround && birdcage)
+			{
+				cout << "\n문이 열렸다.\n";
+				Escape = true;
+			}
 			for (int j = 0; j < 70; j++)
 			{
 				cout << "■";
 			}
 			cout << "\n";
 			ItemShow();
-			cin >> input;
+			if (butterfly && flowerGround && birdcage)
+				_getch();
+			else
+				cin >> input;
 		}
 	}
 	else if (input == ">") // 오른쪽
@@ -864,13 +1006,603 @@ void NightDutyRoom::CheckSafe()
 			answer[2] = (answer[2] + 1) % 3;
 
 		if (answer[0] == 1 && answer[1] == 1 && answer[2] == 2)
+		{
+			butterfly = true;
+			system("cls");
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n\n[나비]팻말을 얻었다.\n\n";
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n";
+			ItemShow();
+
 			break;
+		}
 	}
+	_getch();
+}
+
+bool NightDutyRoom::IsEscape()
+{
+	return Escape;
+}
+
+void Office::OfficeRoom()
+{
+	cout<<"BB                                                                                                                                         K\n";
+	cout<<" 7Q.                                                                                                                                      bU\n";
+	cout<<"  .QB.                                                                                                                                  dBi \n";
+	cout<<"    :BQ                                                                                                                               vB1   \n";
+	cout<<"      vBd                                                                                                                           :BM     \n";
+	cout<<"        UBj                                                                                                                        RB:      \n";
+	cout<<"          ZBr                                                                                                                    1Bv        \n";
+	cout<<"Bu         .Rg:                                                                                                                iQq          \n";
+	cout<<".jBS         BBivvLvLvLvLvLvL77BjiiQBi77v7vrEB77vvLvL77iBD:BBi77v77r5Bd5qKKXPKK1BEBBrrv7v7rdBs112111IjJBg:BB1IXSX52dBgDgMDMgMZdBI           \n";
+	cout<<"   1B2       BB                B  1         B          Bi S         B          B 7         Q          B: L         B          Bj            \n";
+	cout<<"     BBq.    BB    [책장]      B  2         B          Br 5         B          B v         B          Br j         B          B2        i   \n";
+	cout << "     B.:BQ.  BB                B5 [서랍6] B          Br 5 [서랍7] B          B 7 [서랍8] B          Br Y [서랍9] B          BU     :12Q2  \n";
+	cout<<"BPr  B.  :B  MB                B  K         B          Br K         B          B L         B          B7 U         B          QX   7P1. :K  \n";
+	cout<<" :XMIB.   Q  MBs2qKPXPXqXPKPXX5S  BS55XSS2sEB          Br BgddEdZP5bB          B vJU2S55JMBB          Br BbPZDRRQDBB          BS   B    .E  \n";
+	cout<<"    .BQKr B  QB                             B  [책상6] Br           B  [책상7] B          .B  [책상8] B7           B  [책상9] BX   Q    .B  \n";
+	cout<<" [  B  vEB  BB                             B          B7           B          B          iB          Br          .B          BU   B  :YI7  \n";
+	cout<<"r.   B    B  QB                             B          Br          .B          B          :B          Br           B          B2   EXv:    i\n";
+	cout<<"SgQu.B    B  gB                             B          B7          .B          B          iB          B7          .B          BJ       rKMZu\n";
+	cout<<"   iqBZi  B. XBI7vYvv7v7777rri:BL           QBQBQBBBBBRBi          .BRdgDgZgZZPB          :BRQBBQBQBQQBr          .BbPPdPPPbX2Bi  :YdgdY:   \n";
+	cout<<"      .IMgB. PB                B7                                                                                              BRK57.       \n";
+	cout<<"          i  PB     [책상1]     B7                                                                                              BB           \n";
+	cout<<"             dB                B7                                                                                              BB           \n";
+	cout<<"             dBRQQRgDg         Bv                                                                                              BB           \n";
+	cout<<"             RB      B         Bv                                                                                              BB [회의실문] \n";
+	cout<<"             gB      B         BY                                                                                              BB           \n";
+	cout<<"             gQ      B         BL                                                                                              BQ           \n";
+	cout<<"             ZB      B.jBgQMQRMBY                                                                                              BBuu7:.      \n";
+	cout<<"             gg      B.        B7                                                                                              B  :L2dgMdXLi\n";
+	cout<<"       iPBD  EB      B:        Qv           qdEggMgMDDbP            7ju52S5S22Jv            IXPPEdEddqq2            i7YLsYJsuv7B.       .:7u\n";
+	cout<<"   vZBBBSsB  ZB      B: [서랍1] B7         rB          B7          .B          BX          rB          B7          .B          BJ           \n";
+	cout<<"BBBBQB    B  PB      B:        B7          iB          Br          .B          BU          :B          B7          .B          QU           \n";
+	cout<<"7.   B    B  EB      BBsu2U211vBv          :B          Br           B          B2          :B          Br           B          Bu           \n";
+	cout<<"  ] B  :PB  PB                            :B          Br           B          BU          .B          Q7           B          B2           \n";
+	cout<<"    :BEBBuB  bB                            7B  [책상2] Br           B  [책상3] B1          vB  [책상4] Br           Q  [책상5] BU           \n";
+	cout<<" .qBBB:   B  PB BBBBBBBBBB        rBKdEDZZKBB          Br jBgQMQRMdRB          Br iBZDMgMDbQB          Br PREDMggEPDB          BI           \n";
+	cout<<"BB1 :B    B. PQ B  [쓰레 B        7         B          Br P         B          Br r         Q          Br B         B          B2           \n";
+	cout<<"    iB  .KB  qB B  기통] B        i [서랍2] B          Br J [서랍3] B          Bi : [서랍4] B          Br B [서랍5] B          B5           \n";
+	cout<<"    :B7BBL   dB BM:r7v7vjB        i         B          Br L         B          Qr :         B          Bi B         Q          B2           \n";
+	cout<<"   rBBS.     PB                   i         B          Bi v         B          Bi i         B          Qi B         B          B1           \n";
+	cout<<"rDBQ:        BB5YYvv7v777YSPPbPEPbXBBPPZZZbPRBBBQBQBBBBBBQjBBbdDZgZEMBBBBBBBBBQQBQQBqZZgZZPQBBBBBBBBBBBBRjBBXddEdZPRBQMBQBQBQQDBB.          \n";
+	cout<<"BY        .EB7                                                                                                                   Bg         \n";
+	cout<<"        .QB7                                                                                                                      jBj       \n";
+	cout<<"      :QBi                                                                                                                          gQ:     \n";
+	cout<<"    iBQi                                                                                                                             .BQ    \n";
+	cout<<"  rQQ.                                                                                                                                 YB1  \n";
+	cout<<"LqU                                                                                                                                      UQ.\n";
+}
+
+void Office::CheckInput(string &input)
+{
+	if (input == "문")
+	{
+		for (int i = 0; i < 5; i++)
+		{
+			system("cls");
+			OfficeRoom();
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n\n";
+			if (i == 0)
+			{
+				cout << "\n어쩌다가 늦잠을 자버려서 뭔 고생이냐.\n";
+			}
+			else if (i == 1)
+			{
+				cout << "\n역시 다 회의실로 갔나 보네. 빨리 회의 문서나 가지고 가야겠다.\n";
+			}
+			else if (i == 2)
+			{
+				cout << "\n근데 어디에 자료를 뒀더라?\n";
+			}
+			else if (i == 3)
+			{
+				cout << "\n생각해보니 회의실이 어디인지도 모르네?\n";
+			}
+			else if (i == 4)
+			{
+				cout << "\n일단 찾아보자.\n";
+			}
+			cout << "\n\n";
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			ItemShow();
+			if (i == 4)
+			{
+				cin >> input;
+			}
+			else
+				_getch();
+		}
+	}
+	else if (input == "책상1")
+	{
+		for (int i = 0; i < 4; i++)
+		{
+			system("cls");
+			OfficeRoom();
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n\n";
+			if (i == 0)
+			{
+				cout << "\n양동현 부장님 자리다.\n";
+			}
+			if (i == 1)
+			{
+				cout << "\n[컴퓨터]\n노트북에는 잠금이 걸려있다.\n";
+			}
+			if (i == 2)
+			{
+				cout << "\n비밀번호 힌트가 써져있다.\nㅇ6= ㄷ26 ㅎ=ㄴ\n";
+			}
+			if (i == 3)
+			{
+				cout << "\n(비밀번호를 입력하세요.)\n";
+				if (input == "양동현")
+				{
+					cout << "\n[메신저]\n양동현 : 회의는 g421에서 진행합니다. \n";
+					unLockNoteBook = true;
+				}
+				else
+				{
+					cout << "\n잘못된 비밀번호야\n";
+				}
+			}
+
+			cout << "\n\n";
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n";
+			ItemShow();
+			if (i == 2 || i == 3)
+			{
+				cin >> input;
+			}
+			else
+			{
+				_getch();
+			}
+		}
+	}
+	else if (input == "책상2")
+	{
+		for (int i = 0; i < 2; i++)
+		{
+			system("cls");
+			OfficeRoom();
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n\n";
+			if (i == 0)
+			{
+				cout << "\n예유별 과장님 자리다.\n";
+			}
+			if (i == 1)
+			{
+				cout << "\n수선화가 아주 예쁘게 피어 있다.\n";
+			}
+
+			cout << "\n\n";
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n";
+			ItemShow();
+			if (i == 1)
+			{
+				cin >> input;
+			}
+			else
+				_getch();
+		}
+	}
+	else if (input == "책상3")
+	{
+		for (int i = 0; i < 2; i++)
+		{
+			system("cls");
+			OfficeRoom();
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n\n";
+			if (i == 0)
+			{
+				cout << "\n나은희 대리님 자리다.\n";
+			}
+			if (i == 1)
+			{
+				cout << "\n진달래가 아직까지도 잘 살아있다. \n";
+			}
+
+			cout << "\n\n";
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n";
+			ItemShow();
+			if (i == 1)
+			{
+				cin >> input;
+			}
+			else
+				_getch();
+		}
+	}
+	else if (input == "책상4")
+	{
+		for (int i = 0; i < 2; i++)
+		{
+			system("cls");
+			OfficeRoom();
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n\n";
+			if (i == 0)
+			{
+				cout << "\n동희나 사원님 자리다.\n";
+			}
+			if (i == 1)
+			{
+				cout << "\n유채꽃이 시들어가고 있다. \n";
+			}
+
+			cout << "\n\n";
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n";
+			ItemShow();
+			if (i == 1)
+			{
+				cin >> input;
+			}
+			else
+				_getch();
+		}
+	}
+	else if (input == "책상5")
+	{
+		for (int i = 0; i < 2; i++)
+		{
+			system("cls");
+			OfficeRoom();
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n\n";
+			if (i == 0)
+			{
+				cout << "\n도동나 인턴 자리다.\n";
+			}
+			if (i == 1)
+			{
+				cout << "\n사프란이 아름답게 피어 있다.  \n";
+			}
+
+			cout << "\n\n";
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n";
+			ItemShow();
+			if (i == 1)
+			{
+				cin >> input;
+			}
+			else
+				_getch();
+		}
+	}
+	else if (input == "책상6")
+	{
+		for (int i = 0; i < 2; i++)
+		{
+			system("cls");
+			OfficeRoom();
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n\n";
+			if (i == 0)
+			{
+				cout << "\n홍동윤 차장님 자리다.\n";
+			}
+			if (i == 1)
+			{
+				cout << "\n빨간 튤립의 꽃잎이 모두 떨어졌다.  \n";
+			}
+
+			cout << "\n\n";
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n";
+			ItemShow();
+			if (i == 1)
+			{
+				cin >> input;
+			}
+			else
+				_getch();
+		}
+	}
+	else if (input == "책상7")
+	{
+		for (int i = 0; i < 2; i++)
+		{
+			system("cls");
+			OfficeRoom();
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n\n";
+			if (i == 0)
+			{
+				cout << "\n현도윤 주임님 자리다.\n";
+			}
+			if (i == 1)
+			{
+				cout << "\n라벤더가 있던 흔적만 남아있다.  \n";
+			}
+
+			cout << "\n\n";
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n";
+			ItemShow();
+			if (i == 1)
+			{
+				cin >> input;
+			}
+			else
+				_getch();
+		}
+	}
+	else if (input == "책상8")
+	{
+		for (int i = 0; i < 2; i++)
+		{
+			system("cls");
+			OfficeRoom();
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n\n";
+			if (i == 0)
+			{
+				cout << "\n유예별 사원님 자리다.\n";
+			}
+			if (i == 1)
+			{
+				cout << "\n주황 카네이션이 예쁘게 피어 있다.\n";
+			}
+
+			cout << "\n\n";
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n";
+			ItemShow();
+			if (i == 1)
+			{
+				cin >> input;
+			}
+			else
+				_getch();
+		}
+	}
+	else if (input == "책상9")
+	{
+		for (int i = 0; i < 3; i++)
+		{
+			system("cls");
+			OfficeRoom();
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n\n";
+			if (i == 0)
+			{
+				cout << "\n윤은현 인턴 자리다.\n";
+			}
+			if (i == 1)
+			{
+				cout << "\n물망초가 화사하게 피어 있다. \n";
+			}
+			if (i == 2)
+			{
+				cout << "[서랍]\n자물쇠가 걸려있다\n밑에는 메모가 적혀있다.\n꽃을 돌보지 못한 사람을 주시하라.\nEX) :  1278, 3478, 24678";
+			}
+
+			cout << "\n\n";
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n";
+			ItemShow();
+			if (i == 1)
+			{
+				cin >> input;
+			}
+			else
+				_getch();
+		}
+	}
+	else if (input == "467")
+	{
+		for (int i = 0; i < 3; i++)
+		{
+			system("cls");
+			OfficeRoom();
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n\n";
+			if (i == 0)
+			{
+				cout << "\n!철컥!\n";
+			}
+			if (i == 1)
+			{
+				cout << "\n자물쇠를 열었다.\n";
+			}
+			if (i == 2)
+			{
+				cout << "회의 자료를 얻었다.";
+				meetingDocx = true;
+			}
+
+			cout << "\n\n";
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n";
+			ItemShow();
+			if (i == 2)
+			{
+				cin >> input;
+			}
+			else
+				_getch();
+		}
+	}
+	else if (input == "회의실문" && meetingDocx && unLockNoteBook)
+	{
+		isEnd = true;
+		system("cls");
+		cout << "회의 자료도 챙겼으니 얼른 회의실로 가야겠다!"; _getch();
+		exit(0);
+	}
+	else if (input == "회의실문" && !meetingDocx && unLockNoteBook)
+	{
+		isEnd = true;
+		system("cls");
+		cout << "아 회의 자료가 안 보이네.. 우선 회의실로 먼저 가야겠다.."; _getch();
+		exit(0);
+	}
+	else if (input == "회의실문" && !meetingDocx && !unLockNoteBook)
+	{
+		for (int i = 0; i < 2; i++)
+		{
+			system("cls");
+			OfficeRoom();
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n\n";
+			if (i == 0)
+			{
+				cout << "\n회의실이 어디지?\n";
+			}
+			if (i == 1)
+			{
+				cout << "\n멍하니 있을 시간이 없다. 몸을 움직여! 지고쿠! 지고쿠!\n";
+			}
+
+			cout << "\n\n";
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n";
+			ItemShow();
+			if (i == 1)
+			{
+				cin >> input;
+			}
+			else
+				_getch();
+		}
+	}
+	else if (input == "서랍1" || input == "서랍2" || input == "서랍3" || input == "서랍4" || input == "서랍5" || input == "서랍6" || input == "서랍7" || input == "서랍8")
+	{
+		for (int i = 0; i < 1; i++)
+		{
+			system("cls");
+			OfficeRoom();
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n\n";
+			if (i == 0)
+			{
+				cout << "\n타인의 서랍을 여는건 부도덕적인 행위야\n";
+			}
+
+			cout << "\n\n";
+			for (int j = 0; j < 70; j++)
+			{
+				cout << "■";
+			}
+			cout << "\n";
+			ItemShow();
+			if (i == 0)
+			{
+				cin >> input;
+			}
+			else
+				_getch();
+		}
+	}
+	else
+	{
+		ItemShow();
+		cin >> input;
+	}
+}
+
+bool Office::IsEnd()
+{
+	return isEnd;
 }
 
 int main()
 {
 	NightDutyRoom duty;
+	Office office;
 	string input;
 	system("mode con cols=150 lines=60");
 	startScene(duty, input);
@@ -878,5 +1610,11 @@ int main()
 	while (true)
 	{
 		duty.CheckInput(input);
+		if (duty.IsEscape())
+			break;
+	}
+	while (true)
+	{
+		office.CheckInput(input);
 	}
 }
